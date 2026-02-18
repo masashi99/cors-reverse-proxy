@@ -1,0 +1,25 @@
+services:
+  api:
+    build:
+      context: ./api
+      dockerfile: Dockerfile
+    command: ["node", "dist/index.js"]
+    ports:
+      - "3000:3000"
+
+  custom-element:
+    build:
+      context: ./custom-element
+      dockerfile: Dockerfile
+    ports:
+      - "5173:80"
+
+  proxy:
+    build:
+      context: ./proxy
+      dockerfile: Dockerfile
+    ports:
+      - "8080:80"
+    depends_on:
+      - api
+      - custom-element
