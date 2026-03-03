@@ -5,7 +5,7 @@ export default defineConfig({
   build: {
     lib: {
         entry: 'src/my-element.ts',
-        name: 'tech-classification-name',
+        name: 'my-element',
         fileName: 'bundle'
     },
   },
