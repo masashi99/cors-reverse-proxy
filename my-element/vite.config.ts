@@ -6,7 +6,7 @@ export default defineConfig({
     lib: {
         entry: 'src/my-element.ts',
         name: 'my-element',
-        fileName: 'bundle'
+        fileName: 'my-element'
     },
   },
   server: {
